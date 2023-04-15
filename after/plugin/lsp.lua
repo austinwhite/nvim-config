@@ -68,6 +68,8 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
+        formatting.clang_format,
+        formatting.cmake_format,
 	},
 })
 

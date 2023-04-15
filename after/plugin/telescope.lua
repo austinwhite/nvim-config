@@ -8,6 +8,7 @@ telescope.setup({
 	pickers = {
 		find_files = {
 			theme = "ivy",
+            hidden = true,
 		},
 		live_grep = {
 			theme = "ivy",
@@ -31,6 +32,7 @@ telescope.setup({
 			theme = "ivy",
 			initial_mode = "normal",
 			hijack_netrw = true,
+            hidden = true,
 			mappings = {
 				["i"] = {
 					-- insert mode mappings
