@@ -4,6 +4,10 @@ local fn = vim.fn
 local api = vim.api
 local g = vim.g
 
+-- disable netrw for alternative
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
+
 -- set colorscheme
 api.nvim_cmd({
 	cmd = "colorscheme",

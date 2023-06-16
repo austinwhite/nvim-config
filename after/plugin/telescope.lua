@@ -15,7 +15,6 @@ telescope.setup({
 		},
 		buffers = {
 			theme = "ivy",
-			initial_mode = "normal",
 		},
 		help_tags = {
 			theme = "ivy",
@@ -30,7 +29,6 @@ telescope.setup({
 	extensions = {
 		file_browser = {
 			theme = "ivy",
-			initial_mode = "normal",
 			hijack_netrw = true,
             hidden = true,
 			mappings = {

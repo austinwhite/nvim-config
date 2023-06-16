@@ -5,14 +5,14 @@ lsp.preset("recommended")
 lsp.ensure_installed({})
 
 -- fix undefined 'vim'
-lsp.configure("lua-language-server", {
+lsp.configure("lua_ls", {
 	settings = {
 		Lua = {
 			diagnostics = {
 				globals = { "vim" },
 			},
 		},
-	}
+	},
 })
 
 local cmp = require("cmp")
@@ -31,14 +31,14 @@ lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,
 })
 
-lsp.set_preferences({
-	sign_icons = {
-		error = "✘",
-		warn = "▲",
-		hint = "⚑",
-		info = "",
-	},
+lsp.set_sign_icons({
+	error = "✘",
+	warn = "▲",
+	hint = "⚑",
+	info = "»",
 })
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local mason = require("mason")
 mason.setup({
@@ -68,8 +68,9 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-        formatting.clang_format,
-        formatting.cmake_format,
+		formatting.clang_format,
+		formatting.cmake_format,
+		formatting.autoflake,
 	},
 })
 
